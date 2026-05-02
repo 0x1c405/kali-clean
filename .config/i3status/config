@@ -1,0 +1,46 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        color_good = "#3BB92D"
+        interval = 5
+}
+
+order += "ethernet tun0"
+order += "battery all"
+order += "disk /"
+order += "load"
+order += "memory"
+order += "tztime local"
+
+ethernet tun0 {
+        format_up = "tun0: %ip"
+        format_down = ""
+}
+
+battery all {
+        format = "%status %percentage"
+        format_down = "No battery"
+        status_chr = "CHR"
+        status_bat = "BAT"
+        status_unk = "?"
+        status_full = "FULL"
+        low_threshold = 10
+}
+
+disk "/" {
+        format = "%free"
+}
+
+load {
+        format = "%1min"
+}
+
+memory {
+        format = "%used | %total"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}

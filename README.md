@@ -1,8 +1,6 @@
 # Kali-Clean
 
-My kali i3 desktop setup. Some people have been asking so I wrote a quick installer to get going. 
-
-After cloning the repo just run ./install.sh from a non-root user. This updates kali and installs a lot of stuff, so it will take a while. Feel free to optimize ;)
+Stock-ish Kali i3 setup: i3 + i3blocks, Alacritty (Tokyo Night), tmux, rofi, oh-my-zsh.
 
 ## Installation
 
@@ -10,8 +8,12 @@ After cloning the repo just run ./install.sh from a non-root user. This updates 
 ./install.sh
 ```
 
-After the script is done reboot and select i3 (top right corner) on the login screen. Then open a terminal (`ctrl+return`) run `lxappearance`and select ark-dark theme and change the icons to whatever you like (I used papyrus).
+Run as a regular (non-root) user. After it finishes, reboot and pick **i3** in the top-right of the login screen.
 
-## Credits
+## What's included
 
-Wallpaper by Wenqing Yan ( https://www.yuumeiart.com/ ) 
+- `.config/i3/config` — i3 window manager, bar at the bottom, DejaVu Sans Mono.
+- `.config/i3status/config` — status bar (tun0 / battery / disk / load / memory / clock).
+- `.config/alacritty/alacritty.yml` — Tokyo Night palette.
+- `.config/tmux/tmux.conf` — minimal status line.
+- `.config/rofi/config` — launcher config.

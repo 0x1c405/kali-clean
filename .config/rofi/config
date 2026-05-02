@@ -18,4 +18,3 @@ rofi.kb-row-up:
 Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Control+s
 rofi.kb-row-down:                    Down,Control+n,Control+t
 
-rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
