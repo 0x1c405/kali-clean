@@ -16,6 +16,7 @@ cp .config/i3status/config ~/.config/i3status/config
 cp .config/rofi/config ~/.config/rofi/config
 cp .config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 cp .config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+cp .zshenv ~/.zshenv
 
 # TPM (tmux plugin manager) — required by tmux.conf
 [ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
