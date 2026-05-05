@@ -23,5 +23,12 @@ cp .zshenv ~/.zshenv
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Append pentest QoL aliases to .zshrc (idempotent)
+grep -q "alias sane=" ~/.zshrc 2>/dev/null || cat >> ~/.zshrc <<'EOF'
+
+# Restore TTY after tools (impacket-psexec, etc.) leave it in raw mode
+alias sane='stty sane'
+EOF
+
 echo "Done. Reboot and pick i3 at the login screen."
 echo "Inside tmux, press 'prefix + I' to install plugins (prefix = Ctrl-b by default)."

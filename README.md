@@ -18,6 +18,7 @@ Run as a regular (non-root) user. After it finishes, reboot and pick **i3** in t
 - `.config/tmux/tmux.conf` — minimal status line.
 - `.config/rofi/config` — launcher config.
 - `.zshenv` — sets `skip_global_compinit=1` so Kali's `/etc/zsh/zshrc` doesn't run `compinit` before oh-my-zsh runs its own. Cuts shell startup roughly 5× (260ms → 50ms on a measured run).
+- `alias sane='stty sane'` (appended to `~/.zshrc` by `install.sh`) — `impacket-psexec` / `wmiexec` / `smbexec` put the local TTY in raw mode and don't restore it on Ctrl-C or unclean exit, after which `sudo` and Python `getpass` prompts hang on Enter. Type `sane` blind, hit Enter, fixed.
 
 ## Optional: lazy-load pyenv / goenv
 
