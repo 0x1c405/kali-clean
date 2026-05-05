@@ -28,6 +28,9 @@ grep -q "alias sane=" ~/.zshrc 2>/dev/null || cat >> ~/.zshrc <<'EOF'
 
 # Restore TTY after tools (impacket-psexec, etc.) leave it in raw mode
 alias sane='stty sane'
+
+# `go install <pkg>@latest` drops binaries here; not on PATH by default.
+export PATH="$HOME/go/bin:$PATH"
 EOF
 
 echo "Done. Reboot and pick i3 at the login screen."
